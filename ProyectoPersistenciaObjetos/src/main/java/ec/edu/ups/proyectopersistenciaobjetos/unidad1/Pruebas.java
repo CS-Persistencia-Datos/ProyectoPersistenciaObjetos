@@ -9,5 +9,7 @@ package ec.edu.ups.proyectopersistenciaobjetos.unidad1;
  * @author 59398
  */
 public class Pruebas {
-    
+    public static void main(String[] args) {
+        
+    }
 }
