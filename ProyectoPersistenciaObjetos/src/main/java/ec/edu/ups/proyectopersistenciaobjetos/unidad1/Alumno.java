@@ -5,10 +5,9 @@ import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "alumnos") // Nombre de la tabla en la base de datos
+@Table(name = "alumno") // Nombre de la tabla en la base de datos
 public class Alumno {
-
-    @Id
+   @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Generación automática del ID
     private int id;
 
@@ -21,6 +20,13 @@ public class Alumno {
     @Temporal(TemporalType.DATE) // Indica que se mapea como una fecha
     @Column(name = "fecha_nacimiento")
     private Date fechaNacimiento;
+
+    @OneToOne(cascade = CascadeType.ALL) // Relación uno a uno con Dirección
+    @JoinColumn(name = "direccion_id", referencedColumnName = "id")
+    private Direccion direccion;
+
+    public Alumno() {
+    }
 
     // Getters y Setters
     public int getId() {
@@ -53,5 +59,13 @@ public class Alumno {
 
     public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
     }
 }
