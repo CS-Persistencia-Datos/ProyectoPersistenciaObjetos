@@ -1,12 +1,10 @@
 
-package ec.edu.ups.proyectopersistenciaobjetos.unidad1.test;
+package ec.edu.ups.proyectopersistenciaobjetos.unidad1.clase3;
 
-import ec.edu.ups.proyectopersistenciaobjetos.unidad1.Alumno;
-import ec.edu.ups.proyectopersistenciaobjetos.unidad1.Direccion;
 import jakarta.persistence.*;
 import java.util.Date;
 
-
+// Pruebas de la clase 3: Estratégia one to one
 public class Main {
     public static void main(String[] args) {
         // Crear el EntityManagerFactory

@@ -1,5 +1,5 @@
 
-package ec.edu.ups.proyectopersistenciaobjetos.unidad1;
+package ec.edu.ups.proyectopersistenciaobjetos.unidad1.clase3;
 
 import jakarta.persistence.*;
 import java.util.Date;
