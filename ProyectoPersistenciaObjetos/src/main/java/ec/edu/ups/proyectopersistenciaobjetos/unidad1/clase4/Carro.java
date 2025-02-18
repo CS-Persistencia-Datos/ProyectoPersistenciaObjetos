@@ -3,7 +3,7 @@ package ec.edu.ups.proyectopersistenciaobjetos.unidad1.clase4;
 
 import jakarta.persistence.Entity;
 
-@Entity
+//@Entity
 public class Carro extends Vehiculo {
 
     private int numPuertas;

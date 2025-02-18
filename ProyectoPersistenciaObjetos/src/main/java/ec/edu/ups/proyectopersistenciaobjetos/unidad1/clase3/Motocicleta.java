@@ -3,7 +3,7 @@ package ec.edu.ups.proyectopersistenciaobjetos.unidad1.clase3;
 
 import jakarta.persistence.*;
 
-@Entity
+//@Entity
 @DiscriminatorValue("MOTOCICLETA")
 public class Motocicleta extends Vehiculo {
 

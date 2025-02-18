@@ -3,7 +3,7 @@ package ec.edu.ups.proyectopersistenciaobjetos.unidad1.clase4;
 
 import jakarta.persistence.*;
 
-@Entity
+//@Entity(name = "")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public abstract class Vehiculo {
 
