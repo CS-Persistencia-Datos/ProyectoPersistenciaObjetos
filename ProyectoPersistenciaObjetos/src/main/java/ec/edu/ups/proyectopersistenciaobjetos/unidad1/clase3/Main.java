@@ -8,7 +8,7 @@ import java.util.Date;
 public class Main {
     public static void main(String[] args) {
         // Crear el EntityManagerFactory
-        System.out.println("hola");
+       
 //        EntityManagerFactory emf = Persistence.createEntityManagerFactory("unidad_persistencia");
 //        EntityManager em = emf.createEntityManager();
 
