@@ -1,12 +1,14 @@
 
 package ec.edu.ups.proyectopersistenciaobjetos.unidad1.clase3;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Persistence;
 import jakarta.persistence.PersistenceException;
 
+@Entity
 public class Student {
 
     private String firstName;
