@@ -5,8 +5,8 @@ import jakarta.persistence.*;
 
 public class DistributedTransactionExample {
     public static void main(String[] args) {
-        EntityManager em1 = Persistence.createEntityManagerFactory("com.tutorial_ConcurrenciaJPA_jar_1.0-SNAPSHOTPU").createEntityManager();
-        EntityManager em2 = Persistence.createEntityManagerFactory("com.tutorial_ConcurrenciaJPA_jar_1.0-SNAPSHOTPU").createEntityManager();
+        EntityManager em1 = Persistence.createEntityManagerFactory("unidad_persistencia").createEntityManager();
+        EntityManager em2 = Persistence.createEntityManagerFactory("unidad_persistencia").createEntityManager();
         EntityTransaction tx1 = em1.getTransaction();
         EntityTransaction tx2 = em2.getTransaction();
         try {

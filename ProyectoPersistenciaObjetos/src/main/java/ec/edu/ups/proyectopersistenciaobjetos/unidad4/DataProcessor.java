@@ -9,7 +9,7 @@ import jakarta.persistence.TypedQuery;
 
 public class DataProcessor {
     public static void main(String[] args) {
-        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("com.tutorial_ConcurrenciaJPA_jar_1.0-SNAPSHOTPU");
+        EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("unidad_persistencia");
         EntityManager em = entityManagerFactory.createEntityManager();
             try {
             em.getTransaction().begin();

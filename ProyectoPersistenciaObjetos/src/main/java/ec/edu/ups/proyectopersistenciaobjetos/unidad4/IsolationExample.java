@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 
 public class IsolationExample {
     public static void main(String[] args) {
-        EntityManager em = Persistence.createEntityManagerFactory("com.tutorial_ConcurrenciaJPA_jar_1.0-SNAPSHOTPU").createEntityManager();
+        EntityManager em = Persistence.createEntityManagerFactory("unidad_persistencia").createEntityManager();
         EntityTransaction transaction = em.getTransaction();
         try {
             transaction.begin();

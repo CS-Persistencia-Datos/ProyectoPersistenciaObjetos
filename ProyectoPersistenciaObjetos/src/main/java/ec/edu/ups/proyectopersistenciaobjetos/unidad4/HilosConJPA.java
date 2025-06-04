@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 
 public class HilosConJPA {
     private static final ThreadLocal<EntityManager> entityManagerThreadLocal = new ThreadLocal<>();
-    private static final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("com.tutorial_ConcurrenciaJPA_jar_1.0-SNAPSHOTPU");
+    private static final EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("unidad_persistencia");
 
     public static EntityManager getEntityManager() {
         EntityManager em = entityManagerThreadLocal.get();

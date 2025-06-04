@@ -11,7 +11,7 @@ import java.util.List;
 
 public class EntityManagerUtil {
     public static EntityManager getEntityManager() {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("JPA_PU");
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("unidad_persistencia");
         EntityManager manager = factory.createEntityManager();
         return manager;
     }
