@@ -18,7 +18,23 @@ public class Producto {
     @Column(name = "precio")
     private double precio;
 
-    // Getters y Setters (omitidos para brevedad)
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+
 
     @PrePersist
     public void prePersist() {
