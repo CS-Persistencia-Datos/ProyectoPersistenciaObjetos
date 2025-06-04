@@ -39,7 +39,6 @@ public class Main {
         } catch (Exception e) {
             // Si hay un error, hacer rollback
             em.getTransaction().rollback();
-            e.printStackTrace();
         } finally {
             // Cerrar el EntityManager
             em.close();
