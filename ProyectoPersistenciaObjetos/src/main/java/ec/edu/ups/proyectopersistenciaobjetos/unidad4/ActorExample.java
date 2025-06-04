@@ -7,7 +7,7 @@ import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
 
-public class ActorExample {
+public class ActorExample{
     public static void main(String[] args) {
         ActorSystem system = ActorSystem.create("ActorSystem");
         
