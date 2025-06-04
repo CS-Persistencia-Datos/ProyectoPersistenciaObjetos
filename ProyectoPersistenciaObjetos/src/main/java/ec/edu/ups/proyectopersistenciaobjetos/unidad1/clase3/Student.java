@@ -1,6 +1,12 @@
 
 package ec.edu.ups.proyectopersistenciaobjetos.unidad1.clase3;
 
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.Persistence;
+import jakarta.persistence.PersistenceException;
+
 public class Student {
 
     private String firstName;
@@ -54,4 +60,38 @@ public class Student {
                ", email='" + email + '\'' +
                '}';
     }
+    
+    public void saveStudent() {
+    // Usar try-with-resources para garantizar el cierre de los recursos
+    try (EntityManagerFactory emf = Persistence.createEntityManagerFactory("unidad_persistencia");
+         EntityManager em = emf.createEntityManager()) {
+        
+        // Iniciar una transacción
+        EntityTransaction transaction = em.getTransaction();
+        try {
+            transaction.begin();
+
+            // Crear una entidad Student y persistirla
+            Student student = new Student();
+            student.setFirstName("Diego");
+            student.setLastName("Cale");
+            student.setEmail("diego.cale92@gmail.com");
+
+            // Persistir el objeto
+            em.persist(student);
+            transaction.commit();
+        } catch (PersistenceException e) {
+            // Hacer rollback en caso de error
+            if (transaction.isActive()) {
+                transaction.rollback();
+            }
+            // Registrar el error
+            e.printStackTrace();
+        }
+    } catch (Exception e) {
+        // Manejar otros errores relacionados con el EntityManagerFactory
+        e.printStackTrace();
+    }
+}
+
 }
