@@ -4,7 +4,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
-public class ManageConexion {
+public class ManagerConexion {
 
     public static void main(String[] args) {
         // Obtener el EntityManagerFactory para la primera unidad de persistencia
